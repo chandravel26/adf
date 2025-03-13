@@ -5,12 +5,22 @@
 			"referenceName": "SqlServer2needed",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"parameter": {
+				"type": "string",
+				"defaultValue": [
+					"hotelbook",
+					"prod",
+					"cust"
+				]
+			}
+		},
 		"annotations": [],
 		"type": "SqlServerTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "cust"
+			"table": "hotelbook"
 		}
 	}
 }
