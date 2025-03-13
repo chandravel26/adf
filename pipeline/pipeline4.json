@@ -60,7 +60,7 @@
 						"value": "@variables('final')",
 						"type": "Expression"
 					},
-					"isSequential": false,
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Copy data2",
@@ -110,7 +110,13 @@
 							"outputs": [
 								{
 									"referenceName": "SnowflakeTable1",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"ENDINGU": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}

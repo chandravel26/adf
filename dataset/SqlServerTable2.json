@@ -7,12 +7,7 @@
 		},
 		"parameters": {
 			"parameter": {
-				"type": "string",
-				"defaultValue": [
-					"hotelbook",
-					"prod",
-					"cust"
-				]
+				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -20,7 +15,10 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "hotelbook"
+			"table": {
+				"value": "@dataset().parameter",
+				"type": "Expression"
+			}
 		}
 	}
 }
